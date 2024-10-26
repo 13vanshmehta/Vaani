@@ -167,7 +167,7 @@ class DataIntegrator:
         """Close database connection"""
         self.conn.close()
 
-def main(store_id, db_path="retail_db.sqlite"):
+def main(store_id, db_path="database.db"):
     # Load sample weather and news data
     with open("weather_data.json", "r") as f:
         weather_data = json.load(f)
