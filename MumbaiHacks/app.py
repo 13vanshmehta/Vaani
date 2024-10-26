@@ -297,7 +297,8 @@ class RecommendationSystem:
             max_length=512
         )
         outputs = self.sentiment_analyzer(**inputs)
-        sentiment_score = torch.sigmoid(outputs.logits).item()
+        # Take the mean of the logits across all classes and apply sigmoid
+        sentiment_score = torch.sigmoid(outputs.logits.mean()).item()
         return sentiment_score
 
     def calculate_confidence_score(self, data_point):
@@ -352,7 +353,6 @@ class RecommendationSystem:
                     })
         except Exception as e:
             print(f"Error processing feedback: {str(e)}")
-        print(processed_feedback)
         return processed_feedback
 
     def generate_recommendations(self, data):
