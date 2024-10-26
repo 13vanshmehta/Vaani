@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Home */
+
+.Main-Body{
+  background-image: url('/Background.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw; 
+  height: 200vh;
+  padding-top: 6rem;
+}
+
+.white-logo {
+  filter: brightness(0) invert(1); /* This inverts black to white */
+  opacity: 0.8; /* Adjust opacity if needed */
+}
+
+.bg-web{
+  background-image: url('/Background.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5rem;
+}
+
+.dash-img{
+  margin: 2px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
